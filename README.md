@@ -55,7 +55,7 @@ Downloading the repository:
 - From the _drop-down options_, select **Download Zip.**
 - This will download the repository to your local machine.
 
-IMAGE--> of how to download the repository
+<img width="612" alt="Screenshot 2024-04-08 204104" src="https://github.com/kovymun/frontend-web-development-project-e-commerce-website-html-css-javascript/assets/78513588/6e26bc99-c2ff-42dd-bcbc-9f7b8b7275fd">
 
 After downloading the repository, you'll find the following folders / directories in the Download.zip folder:
 
