@@ -1,0 +1,205 @@
+<!-- THE SPICE PANTRY E-COMMERCE WEBSITE: CUSTOMER REVIEW HTML FILE -->
+<!-- Kindly refer to the end of this document for all references -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>The Spice Pantry | Customer Reviews</title>
+
+    <!-- Disclaimer: This webpage utilizes both CSS and Bootstrap stylings -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN link for Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="testimonial-page app-page">
+      <!-- HEADER / NAVBAR SECTION -->
+      <header id="site-header" class="site-header z-2">
+        <!-- Responsive Hamburger Menu Icon  -->
+        <div
+          id="hamburger-menu"
+          class="hamburger-menu ms-3"
+          onclick="navToggleMenu()"
+        >
+          <i class="bi bi-list text-white fs-2 fw-bolder"></i>
+
+          <!-- Responsive Hamburger Menu Asterisk: indicates that there are items in the shopping cart. -->
+          <i id="hamburger-menu-bi-asterisk"></i>
+        </div>
+
+        <!-- Navigation bar links -->
+        <div id="navbar-container" class="navbar-container">
+          <nav id="navbar">
+            <ul>
+              <li class="list-unstyled">
+                <a href="../html/landPage.html">Home</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/products.html">Shop</a>
+              </li>
+              <!-- New HTML link structure for the cart nav link display - active for screen widths below 768px -->
+              <li class="list-unstyled" id="responsive-cart-nav-link">
+                <a href="../html/cart.html">Cart</a>
+                <span id="responsive-cart-total"></span>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/about.html">Our Story</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/reviews.html">Reviews</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/contact.html">Contact Us</a>
+              </li>
+              <!-- Navbar Cart Icon -->
+              <a
+                class="cart-nav-link me-4 position-relative"
+                href="./cart.html"
+              >
+                <div class="cart-icon-container fs-1">
+                  <i class="cart-icon bi bi-bag-fill"></i>
+                </div>
+                <div id="cart-qty" class="cart-qty"></div>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- 
+      DISCLAIMER: The content presented on this website, including but not limited to names, addresses, contact information, and phone numbers 
+      is entirely fictitious and created for demonstration purposes only. The use of fictitious content is intended to showcase the functionality of the 
+      website and does not represent any real individuals, businesses, or locations.
+      -->
+
+      <!-- Customer Review Page content container -->
+      <div id="page-content-container" class="container-lg text-white">
+        <!-- Customer Review Page Title -->
+        <div class="row app-content-container mx-0 mb-4">
+          <div class="col-12 p-3">
+            <h2>Customer Experiences and Reviews</h2>
+          </div>
+        </div>
+
+        <div class="page-intro app-content-container row mx-0 mb-4">
+          <div class="col-12 p-4">
+            <p class="fs-5">
+              Delve into the heartwarming experiences of our cherished customers
+              as they share their culinary journeys with our aromatic spices.
+              From elevating everyday dishes to new heights to discovering
+              hidden gems of flavor, our customers' stories embody the heart and
+              soul of <strong>The Spice Pantry</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Review / Testimonial One -->
+        <div class="row app-content-container mb-4 g-0 align-items-md-stretch">
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="testimonial-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/testimonial_images/testmonial-one.jpg"
+              alt="A woman leaning casually against a table, smiling warmly"
+            />
+          </div>
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex justify-content-center align-items-center"
+          >
+            <p>
+              "Absolutely love The Spice Pantry! As a homemaker who adores
+              crafting meals for my family, finding quality ingredients is
+              crucial. The moment I stepped into The Spice Pantry, I was
+              enveloped in the aroma of authenticity. I picked up their saffron
+              spice, and it completely transformed my dishes. One of my
+              favorites to make with their saffron is a hearty saffron-infused
+              paella. The richness and flavor elevate the dish to a whole new
+              level, making it a family favorite. I've also experimented with a
+              saffron-infused chicken and rice dish that's become a weekly
+              request from my kids. The Spice Pantry has become my go-to for all
+              my seasoning needs. They truly make my kitchen adventures
+              unforgettable!" - Kate, Cape Town
+            </p>
+          </div>
+        </div>
+
+        <!-- Review / Testimonial Two -->
+        <div class="app-content-container row mb-4 g-0 align-items-md-stretch">
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex justify-content-center align-items-center"
+          >
+            <p>
+              "Exploring The Spice Pantry has been an absolute delight for us!
+              As a young couple diving into the world of cooking, we've found a
+              treasure trove of flavors here. The vibrant array of spices is
+              like a playground for our culinary adventures. Our recent
+              discovery, the cumin and paprika blend, has been a game-changer,
+              adding a zing to our dishes. The Spice Pantry has ignited our love
+              for experimenting with flavors, making our cooking journey
+              thrilling and oh so delicious!" - Sam and Sasha, Fourways.
+            </p>
+          </div>
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="testimonial-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/testimonial_images/testimonial-two.jpg"
+              alt="A joyful couple laughing together while enjoying a takeout meal"
+            />
+          </div>
+        </div>
+
+        <!-- Review / Testimonial Three -->
+        <div class="app-content-container row mb-5 g-0 align-items-md-stretch">
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="testimonial-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/testimonial_images/testimonial-three.jpg"
+              alt="A happy father carrying his young son on his shoulders, both smiling gleefully"
+            />
+          </div>
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex justify-content-center align-items-center"
+          >
+            <p>
+              "Discovering The Spice Pantry was a game-changer for us! As a
+              young dad navigating the world of parenting, their spices became
+              more than just seasonings. When our little one had a mild tummy
+              issue, their recommended clove spice worked wonders, soothing and
+              comforting our baby. It was a relief to find natural remedies that
+              were safe and effective. The Spice Pantry isn't just a spice
+              haven; it's our trusted go-to for culinary needs and unexpected
+              remedies for our family's well-being." - Joshua, Durban
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Javascript file links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/cartIcon.js"></script>
+    <script src="../js/navWindowScroll.js"></script>
+    <script src="../js/activeNavLink.js"></script>
+    <script src="../js/navToggleMenu.js"></script>
+  </body>
+</html>
+
+<!-- REFERENCES -->
+<!-- All images used in this customer review display are royalty free, sourced from the following websites: Unsplash, Pexels, Pixabay and FreePik -->

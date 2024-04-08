@@ -1,0 +1,210 @@
+<!-- THE SPICE PANTRY E-COMMERCE WEBSITE: OUR STORY / ABOUT HTML FILE -->
+<!-- Kindly refer to the end of this document for all references -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>The Spice Pantry | Our Story</title>
+
+    <!-- Disclaimer: This webpage utilizes both CSS and Bootstrap stylings -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN link for Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="about-page app-page">
+      <!-- HEADER / NAVBAR SECTION -->
+      <header id="site-header" class="site-header z-2">
+        <!-- Responsive Hamburger Menu Icon  -->
+        <div
+          id="hamburger-menu"
+          class="hamburger-menu ms-3"
+          onclick="navToggleMenu()"
+        >
+          <i class="bi bi-list text-white fs-2 fw-bolder"></i>
+
+          <!-- Responsive Hamburger Menu Asterisk: indicates that there are items in the shopping cart. -->
+          <i id="hamburger-menu-bi-asterisk"></i>
+        </div>
+
+        <!-- Navigation bar links -->
+        <div id="navbar-container" class="navbar-container">
+          <nav id="navbar">
+            <ul>
+              <li class="list-unstyled">
+                <a href="../html/landPage.html">Home</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/products.html">Shop</a>
+              </li>
+              <!-- New HTML link structure for the cart nav link display - active for screen widths below 768px -->
+              <li class="list-unstyled" id="responsive-cart-nav-link">
+                <a href="../html/cart.html">Cart</a>
+                <span id="responsive-cart-total"></span>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/about.html">Our Story</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/reviews.html">Reviews</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/contact.html">Contact Us</a>
+              </li>
+              <!-- Navbar Cart Icon -->
+              <a
+                class="cart-nav-link me-4 position-relative"
+                href="./cart.html"
+              >
+                <div class="cart-icon-container fs-1">
+                  <i class="cart-icon bi bi-bag-fill"></i>
+                </div>
+                <div id="cart-qty" class="cart-qty"></div>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- 
+      DISCLAIMER: The content presented on this website, including but not limited to names, addresses, contact information, and phone numbers 
+      is entirely fictitious and created for demonstration purposes only. The use of fictitious content is intended to showcase the functionality of the 
+      website and does not represent any real individuals, businesses, or locations.
+      -->
+
+      <!-- About / Our Story Page content container -->
+      <div id="page-content-container" class="container-lg text-white">
+        <!-- About / Our Story Page Title -->
+        <div class="row app-content-container mx-0 mb-4">
+          <div class="col-12 p-3">
+            <h2>The Spice Pantry: A Story of Sisters, Spices and Sharing</h2>
+          </div>
+        </div>
+
+        <!-- Section One: Meet the company owners -->
+        <div class="app-content-container row mb-4 g-0 align-items-md-stretch">
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="about-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/app_images/sisters-hugging.jpg"
+              alt="Two sisters joyfully embracing each other in a warm hug, expressing happiness and affection"
+            />
+          </div>
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex flex-column justify-content-center"
+          >
+            <h4>
+              Meet Lily-Anne and Chloe: The Sisters Behind The Spice Pantry
+            </h4>
+            <p>
+              Hey there, spice enthusiasts! Welcome to The Spice Pantry, where
+              flavor and family come together in every dish. We're Lily-Anne and
+              Chloe Springfield, hailing from the vibrant city of Durban, South
+              Africa. Our journey into the world of spices began in our
+              grandmother's kitchen, where she instilled in us a love for
+              cooking infused with laughter and seasoned with love.
+            </p>
+            <p>
+              From those early days of culinary experimentation, we've grown
+              into passionate connoisseurs of flavor. We believe that every
+              spice tells a story, and every dish is a celebration of family and
+              community.
+            </p>
+            <p>
+              As sisters and co-owners of The Spice Pantry, we are committed to
+              sharing our love for spice. Whether you're a seasoned chef or an
+              amateur cook exploring new flavors, we invite you to join our
+              spice-loving family and embark on a flavorful journey together."
+            </p>
+          </div>
+        </div>
+
+        <!-- Section Two: Mission Statement -->
+        <div class="app-content-container row mb-4 g-0 align-items-md-stretch">
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex flex-column justify-content-center"
+          >
+            <h4>Quality Spices, Exceptional Service: Our Commitment to You</h4>
+            <p>
+              Our mission is simple: to provide you with access to the highest
+              quality spices that enhance your culinary creations.
+            </p>
+            <p>
+              Each spice offered here is sourced locally, ensuring the highest
+              quality and freshness. We take pride in partnering with the best
+              suppliers and farmers to bring you an unparalleled culinary
+              experience.
+            </p>
+            <p>
+              Our commitment to quality extends beyond our products to our
+              customer service. With warmth in our hearts and spices in our
+              hands, we promise to make you feel like family. We're here to help
+              you explore new flavors, answer any questions you may have, and
+              ensure your culinary creations are nothing short of spectacular.
+            </p>
+          </div>
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="about-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/app_images/harvesting.jpg"
+              alt="Farmers diligently harvesting spices"
+            />
+          </div>
+        </div>
+
+        <!-- Section Three: Closing Statement -->
+        <div class="app-content-container row mb-5 g-0 align-items-md-stretch">
+          <div class="col-xxl-6 col-lg-4 col-md-6 align-items-md-stretch">
+            <img
+              class="about-img img-fluid object-fit-cover w-100 h-100"
+              src="../images/app_images/market-spice.jpg"
+              alt="Vibrant spice arrangements displayed in a market, showcasing diverse colors and varieties"
+            />
+          </div>
+          <div
+            class="col-xxl-6 col-lg-8 col-md-6 p-4 d-flex flex-column justify-content-center"
+          >
+            <h4>From Our Family to Yours: A Flavorful Journey Awaits</h4>
+            <p>
+              We extend our heartfelt thanks for joining us on your flavorful
+              journey. At The Spice Pantry, we're more than a store - we're a
+              community bonded by a love for spices and good food. So please
+              explore our spice-filled haven, and let's spice up your life
+              together! We can't wait for the delicious adventures that lie
+              ahead!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Javascript file links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/activeNavLink.js"></script>
+    <script src="../js/navToggleMenu.js"></script>
+    <script src="../js/navWindowScroll.js"></script>
+    <script src="../js/cartIcon.js"></script>
+  </body>
+</html>
+
+<!-- REFERENCES -->
+<!-- All images used in this about display are royalty free, sourced from the following websites: Unsplash, Pexels, Pixabay and FreePik -->

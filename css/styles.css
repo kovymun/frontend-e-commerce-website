@@ -1,0 +1,1015 @@
+/** THE SPICE PANTRY - CSS FILE **/
+/* 
+* Disclaimer: This webpage utilizes both CSS and Bootstrap stylings. 
+* All icons used in the project are sourced from Bootstrap Icons https://icons.getbootstrap.com/
+* All fonts used in the project are sourced from Google Fonts https://fonts.google.com/
+*/
+
+/* Importing font families from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+
+/* STYLING RELATED TO ALL PAGES */
+/* 
+* Removing the default styling and adding styling common to all pages/elements.
+* Color palettes used in this application are inspired by earthy spice tones and other colors related to spices.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Agbalumo", sans-serif;
+}
+
+/* STYLING RELATED TO THE LANDING PAGE AND HEADER | NAVBAR */
+.landing-page {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100dvh;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 15dvh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.landing-page header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.site-header {
+  background: #d9bf8e;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.navbar-container {
+  width: 100%;
+}
+
+nav ul {
+  height: 10dvh;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li a {
+  position: relative;
+  font-size: 1.5rem;
+  display: inline-block;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.landing-page nav ul li a {
+  color: #fff;
+}
+
+.app-page nav ul li a {
+  color: #333333;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -8px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s linear;
+}
+
+.landing-page nav ul li a::after {
+  background: #fff;
+}
+
+.app-page nav ul li a::after {
+  background: #333333;
+}
+
+nav ul li a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#responsive-cart-nav-link {
+  display: none;
+}
+
+/* Styles for the Navbar Cart Icon Link */
+.landing-page .cart-icon {
+  color: #fff;
+}
+
+.app-page .cart-icon {
+  color: #333333;
+}
+
+.cart-qty {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333333;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.landing-page .cart-qty {
+  color: #333333;
+}
+
+.app-page .cart-qty {
+  color: #fff;
+}
+
+.bg-video-container {
+  z-index: -1;
+}
+
+.bg-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100dvh;
+}
+
+.landing-title {
+  position: relative;
+  z-index: 1;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  height: 10dvh;
+  z-index: 2;
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+}
+
+.social-icon-container i {
+  cursor: pointer;
+}
+
+.container-lg {
+  padding-top: 2em;
+}
+
+.app-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  overflow-y: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(184, 139, 92, 0.4),
+      rgba(184, 139, 92, 0.4)
+    ),
+    url(../images/app_images/spice-arrangement.jpg);
+}
+
+.page-intro * {
+  font-family: "Crimson Pro", serif;
+  color: #fff;
+}
+
+.app-content-container {
+  box-shadow: 3px 3px 5px 3px #ffffff;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: contrast(10%);
+}
+
+.app-content-container p:not(.contact-text *) {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.125rem;
+}
+
+.app-content-container p a:not(.contact-text *) {
+  font-family: "Crimson Pro", serif;
+}
+
+/* STYLING FOR THE SHOP | PRODUCTS PAGE */
+.price-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.price-quantity * {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.price-quantity > h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.cart-quantity {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #3c2317;
+  color: #ffd372;
+  width: 25%;
+}
+
+.cart-quantity h4 {
+  margin-top: 0.3em;
+}
+
+#shop-cart-btn {
+  text-decoration: none;
+  padding: 0.2em 1em;
+  margin: 0;
+}
+
+.quantity-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-buttons i {
+  transition: background-color 0.3s ease;
+}
+
+.quantity-buttons i:hover {
+  background-color: #333333;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Cursor styling for the increment and decrement buttons */
+#minus,
+#plus {
+  cursor: pointer;
+}
+
+.product-sale-weight {
+  font-size: 1rem;
+}
+
+/* STYLING FOR THE CONTACT US PAGE */
+.contact-text * {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.contact-text a {
+  color: #fff;
+}
+
+.contact-text h3 {
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+}
+
+.contact-container h3 {
+  margin-bottom: 0.6em;
+}
+
+.contact-container .subscribe-form {
+  margin-top: 1.7em;
+}
+
+.contact-container .social-icon-container {
+  margin-top: 1.7em;
+  width: 100%;
+}
+
+.subscribe-form input {
+  width: 25%;
+  padding: 0.3em 0.4em;
+  margin-right: 1em;
+  height: 2.5186em;
+}
+
+.subscribe-form button {
+  width: 20%;
+}
+
+.app-btn {
+  border: none;
+  background: #333333;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.3em 0.4em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.app-btn:hover:not(#cart-quantity) {
+  background-color: #555555;
+  outline: 2px solid #444444;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* STYLING FOR THE SHOPPING CART */
+.cart-details * {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+}
+
+.cart-details .cart-heading {
+  font-family: "Agbalumo", sans-serif;
+}
+
+.empty-cart-cont-shopping-link {
+  text-decoration: inherit;
+  width: 50%;
+  text-align: center;
+}
+
+.del-select-menu-container {
+  display: none;
+}
+
+.cart-details img {
+  filter: brightness(130%);
+}
+
+.table-responsive {
+  overflow-x: scroll;
+}
+
+.order-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary-table tr {
+  border-bottom: 3px solid #fff;
+}
+
+.order-summary-table th,
+.order-summary-table td {
+  width: 20%;
+  padding: 1em;
+}
+
+.remove-cart-item-btn {
+  font-size: 1rem;
+}
+
+.clear-cart-btn {
+  width: 25%;
+  text-align: center;
+}
+
+.continue-shopping-cart-btn {
+  width: 35%;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.checkout-btn {
+  width: 30%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.info-message-close-btn {
+  display: block;
+  width: 30%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.del-select-menu option {
+  background-color: #fff;
+  color: #898582;
+}
+
+/* This class is triggered on the purchase details / summary table when the number of table rows (tr) exceeds 4 - applies vertical scrollable behavior */
+.scrollable {
+  max-height: 220px;
+  overflow-y: scroll;
+}
+
+.user-delivery-selection {
+  font-size: 0.8rem;
+}
+
+/* Styling for all placeholder attributes */
+::placeholder {
+  letter-spacing: 0.2em;
+  color: #333333;
+}
+
+/* STYLING FOR ALL INFO MESSAGE BOXES */
+
+.info-message-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: block;
+  z-index: 2;
+}
+
+.info-message-container-hidden {
+  display: none;
+}
+
+.info-message-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #fff;
+  padding: 2em;
+  overflow-y: auto;
+  background: #898582;
+}
+
+.info-message-content *:not(h3) {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.info-message-content a {
+  color: #fff;
+}
+
+.info-message-content h5 {
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+#order-confirmation-message-content {
+  height: auto;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: contrast(5%);
+}
+
+#refund-exchange-policy-content {
+  height: 85dvh;
+}
+
+#order-confirmation-message-content {
+  height: auto;
+}
+
+.order-ref-number {
+  letter-spacing: 0.1em;
+}
+
+/* STYLING FOR THE PAYMENT | DELIVERY | BILLING PAGE */
+#payment-page-content {
+  height: 85dvh;
+  width: 80%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: contrast(5%);
+}
+
+#payment-page-content p:not(.billing-amt-title, .total-billing-amt) {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.1rem;
+}
+
+.billing-amt-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 100%;
+  letter-spacing: 0.3em;
+}
+
+.billing-amt-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.billing-amt-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  height: 50px;
+}
+
+.total-billing-amt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+  height: 50px;
+  margin-left: 1em;
+}
+
+.checkout-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.checkout-form-input {
+  padding: 0.3em 0.4em;
+  height: 2.5186em;
+}
+
+.billing-address-input {
+  grid-column: 1 / span 2;
+  padding: 0.3em 0.4em;
+}
+
+.card-details {
+  grid-column: 1 / span 2;
+}
+
+.payment-page-btn-container {
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.payment-page-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- MEDIA QUERIES ------------------------------------------------------------------------------------ */
+@media (max-width: 335px) {
+  .radio-group .radio-check-box {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .landing-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 500px) {
+  .landing-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .info-message-content {
+    width: 90%;
+    padding: 1em;
+  }
+
+  #payment-page-content {
+    height: 90dvh;
+  }
+}
+
+@media (max-width: 445px) {
+  .billing-amt-container {
+    justify-content: space-between;
+    letter-spacing: 0.1em;
+  }
+
+  .total-billing-amt {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 555px) {
+  .cart-item-qty {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-details .cart-item-count {
+    margin-left: 0.1em;
+  }
+
+  #payment-page-content {
+    width: 90%;
+  }
+
+  /* Resetting the payment page form grid to one column for screen width < 555px */
+  .checkout-form {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-form-input,
+  .billing-address-input,
+  .card-details {
+    width: 100%;
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .info-message-content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .radio-check-box {
+    margin-bottom: 0.3em;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-content-container img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 10dvh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .site-header {
+    background: transparent;
+  }
+
+  .site-header-scroll-background {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(500px);
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* Styling for the hamburger icon asterisk, which indicates that there are items in the shopping cart. */
+  .hamburger-menu-bi-asterisk {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 0.6rem;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  .navbar-container {
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(50px);
+    transition: width 1s ease-in-out, height 1s ease-in-out, 1s ease-in-out;
+    opacity: 0;
+  }
+
+  .navbar-container.visible {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+  }
+
+  .footer.hidden {
+    z-index: -1;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0; /*removing the default left padding on the ul element*/
+  }
+
+  .cart-nav-link {
+    display: none;
+  }
+
+  #responsive-cart-nav-link {
+    display: block;
+    position: relative;
+  }
+
+  /* Styling for the responsive cart navigation link icon */
+  .responsive-cart-total {
+    position: absolute;
+    top: 2px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: #fff;
+    outline: 1px solid #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    margin-left: 5px;
+    font-weight: 700;
+  }
+
+  .social-icon-container {
+    width: 60%;
+  }
+
+  .price-quantity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-quantity * {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .price-quantity *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  .cart-qty-heading {
+    display: none;
+  }
+
+  .quantity-buttons {
+    width: 100%;
+    display: flex;
+  }
+
+  .quantity-buttons .quantity {
+    margin-top: 0.3em;
+  }
+
+  #minus {
+    margin-top: 0.4em;
+  }
+
+  #plus {
+    margin-bottom: 0.2em;
+  }
+
+  #shop-cart-btn {
+    padding: 0.5em 1em;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscribe-form input {
+    margin: 0 0 0.5em 0;
+    min-width: 90%;
+  }
+
+  .subscribe-form button {
+    min-width: 90%;
+  }
+
+  .social-contact .social-icon-container {
+    width: 100%;
+    margin-right: 10em;
+  }
+
+  .checkout-btn,
+  .clear-cart-btn,
+  .info-message-close-btn,
+  .continue-shopping-cart-btn {
+    width: 100%;
+  }
+
+  .cart-item-qty {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-details .cart-item-count {
+    margin-left: 0.1em;
+  }
+
+  .info-message-content ol {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+
+  #refund-exchange-policy-content {
+    width: 90%;
+  }
+
+  #order-confirmation-message-content {
+    width: 90%;
+  }
+
+  .empty-cart-cont-shopping-link {
+    width: 100%;
+  }
+
+  .payment-page-btn-container {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-page-btn {
+    width: 100%;
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 995px) {
+  .price-quantity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-quantity * {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .price-quantity *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  .cart-qty-heading {
+    display: none;
+  }
+
+  .quantity-buttons {
+    width: 100%;
+    display: flex;
+  }
+
+  .quantity-buttons .quantity {
+    margin-top: 0.3em;
+  }
+
+  #minus {
+    margin-top: 0.4em;
+  }
+
+  #plus {
+    margin-bottom: 0.2em;
+  }
+
+  #order-confirmation-message-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .checkout-btn {
+    width: 40%;
+  }
+
+  .clear-cart-btn {
+    width: 30%;
+  }
+
+  .cart-item-qty {
+    display: flex;
+  }
+
+  .cart-details .cart-item-count {
+    margin: 0 0.5em;
+  }
+
+  .continue-shopping-cart-btn {
+    width: 50%;
+  }
+
+  .empty-cart-cont-shopping-link {
+    width: 80%;
+  }
+
+  #refund-exchange-policy-content {
+    width: 80%;
+  }
+
+  #order-confirmation-message-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .continue-shopping-cart-btn {
+    width: 40%;
+  }
+
+  #refund-exchange-policy-content {
+    width: 80%;
+  }
+
+  #order-confirmation-message-content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1441px) {
+  #page-content-container {
+    max-width: 85%;
+  }
+
+  .price-quantity {
+    justify-content: space-between;
+  }
+
+  #refund-exchange-policy-content {
+    width: 70%;
+    height: auto;
+  }
+
+  #payment-page-content {
+    height: 70dvh;
+  }
+}

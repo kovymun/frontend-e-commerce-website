@@ -1,0 +1,282 @@
+<!-- THE SPICE PANTRY E-COMMERCE WEBSITE: SHOPPING CART HTML FILE -->
+<!-- Kindly refer to the end of this document for all references -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>The Spice Pantry | Shopping Cart</title>
+
+    <!-- Disclaimer: This webpage utilizes both CSS and Bootstrap stylings -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN link for Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="cart-page app-page">
+      <!-- HEADER / NAVBAR SECTION -->
+      <header id="site-header" class="site-header z-2">
+        <!-- Responsive Hamburger Menu Icon  -->
+        <div
+          id="hamburger-menu"
+          class="hamburger-menu ms-3"
+          onclick="navToggleMenu()"
+        >
+          <i class="bi bi-list text-white fs-2 fw-bolder"></i>
+
+          <!-- Responsive Hamburger Menu Asterisk: indicates that there are items in the shopping cart. -->
+          <i id="hamburger-menu-bi-asterisk"></i>
+        </div>
+
+        <!-- Navigation bar links -->
+        <div id="navbar-container" class="navbar-container">
+          <nav id="navbar">
+            <ul>
+              <li class="list-unstyled">
+                <a href="../html/landPage.html">Home</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/products.html">Shop</a>
+              </li>
+              <!-- New HTML link structure for the Cart nav link display - active for screen widths below 768px -->
+              <li class="list-unstyled" id="responsive-cart-nav-link">
+                <a href="../html/cart.html">Cart</a>
+                <span id="responsive-cart-total"></span>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/about.html">Our Story</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/reviews.html">Reviews</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/contact.html">Contact Us</a>
+              </li>
+              <!-- Navbar Cart Icon -->
+              <a
+                class="cart-nav-link me-4 position-relative"
+                href="./cart.html"
+              >
+                <div class="cart-icon-container fs-1">
+                  <i class="cart-icon bi bi-bag-fill"></i>
+                </div>
+                <div id="cart-qty" class="cart-qty"></div>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Shopping Cart content container -->
+      <div id="page-content-container" class="container-lg text-white">
+        <!-- Shopping Cart Page Title -->
+        <div class="row app-content-container mx-0 mb-4">
+          <div class="col-12 p-3">
+            <h2>Shopping Cart</h2>
+          </div>
+        </div>
+
+        <div class="cart-details" id="cart-details">
+          <!-- Section One: HTML Structure for Cart items (populated by cart.js script file) -->
+          <div
+            class="app-content-container row mb-4 g-0 align-items-md-stretch"
+          >
+            <div
+              class="col-xxl-6 col-lg-7 col-md-8 p-4 d-flex flex-column justify-content-center"
+            >
+              <h4 class="cart-heading">Purchase Details</h4>
+              <p>
+                Thank you for choosing The Spice Pantry! We're delighted to have
+                you as our valued customer. Below is your purchase summary. If
+                you have any questions or need assistance, feel free to reach
+                out to our friendly team at
+                <a href="mailto:customercare@thespicepantry.co.za"
+                  >customercare@thespicepantry.co.za</a
+                >. Happy shopping!
+              </p>
+              <div id="table-responsive" class="table-responsive">
+                <table class="order-summary-table">
+                  <thead>
+                    <tr class="cart-purchase-summary-row">
+                      <th>PRODUCT</th>
+                      <th>QTY</th>
+                      <th>PRICE</th>
+                      <th>TOTAL</th>
+                      <th>ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody id="purchase-summary-table-data"></tbody>
+                </table>
+              </div>
+              <!-- Buttons to continue shopping or clear the cart -->
+              <div>
+                <a
+                  href="../html/products.html"
+                  class="app-btn continue-shopping-cart-btn mt-3 d-inline-block"
+                >
+                  CONTINUE SHOPPING
+                </a>
+                <div
+                  onclick="clearShoppingCart()"
+                  class="app-btn clear-cart-btn mt-3 d-inline-block"
+                >
+                  CLEAR CART
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-6 col-lg-5 col-md-4 align-items-md-stretch">
+              <img
+                class="cart-img img-fluid object-fit-cover w-100 h-100"
+                src="../images/app_images/table-spices.jpg"
+                alt="A vibrant and colorful array of assorted spices beautifully arranged on a table, creating an eye-catching display"
+              />
+            </div>
+          </div>
+
+          <!-- Section Two: Product Collection / Delivery Options -->
+          <div
+            class="app-content-container row mb-4 g-0 align-items-md-stretch"
+          >
+            <div class="col-xxl-6 col-lg-5 col-md-4 align-items-md-stretch">
+              <img
+                class="cart-img img-fluid object-fit-cover w-100 h-100"
+                src="../images/app_images/delivery-bike.jpg"
+                alt="A man swiftly riding a delivery bike"
+              />
+            </div>
+            <div
+              class="col-xxl-6 col-lg-7 col-md-8 p-4 d-flex flex-column justify-content-center"
+            >
+              <h4 class="cart-heading mb-3">Delivery Options</h4>
+
+              <!-- Selection options for users to choose between "in-store collection" or "delivery" for their purchased products using radio buttons. -->
+              <form class="delivery-radio mb-3">
+                <div class="radio-group">
+                  <div class="radio-check-box d-block me-3 d-sm-inline-block">
+                    <input
+                      type="radio"
+                      id="del-collection"
+                      name="del-option"
+                      value="collection"
+                      checked
+                      onchange="delCostCalculation(); totalPurchaseAmount()"
+                    />
+                    <label>In-store collection</label>
+                  </div>
+
+                  <div class="radio-check-box d-block me-3 d-sm-inline-block">
+                    <input
+                      type="radio"
+                      id="del-delivery"
+                      name="del-option"
+                      value="delivery"
+                      onchange="delCostCalculation()"
+                    />
+                    <label>Delivery</label>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Dropdown menu allowing users to choose their preferred delivery method. -->
+              <div
+                id="del-select-menu-container"
+                class="del-select-menu-container mb-3"
+              >
+                <select
+                  id="del-selection"
+                  class="form-select del-select-menu"
+                  required
+                  onchange="delCostCalculation(); totalPurchaseAmount()"
+                >
+                  <option value="" disabled selected>
+                    -- Please select your delivery option --
+                  </option>
+                  <option value="same-day">Same-Day Express (R100)</option>
+                  <option value="overnight">Overnight Express (R85)</option>
+                  <option value="standard-del">
+                    Standard Delivery 3 - 7 Working Days (FREE)
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Three: Final confirm order / checkout (populated by cart.js script file) -->
+          <div
+            class="app-content-container row mb-5 g-0 align-items-md-stretch"
+          >
+            <div
+              class="col-xxl-6 col-lg-7 col-md-8 p-4 d-flex flex-column justify-content-center"
+            >
+              <h4 class="cart-heading mb-3">Order Summary</h4>
+              <div class="table-responsive">
+                <table class="order-summary-table">
+                  <thead>
+                    <tr>
+                      <th>BREAKDOWN</th>
+                      <th></th>
+                      <th></th>
+                      <th>AMT(R)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="order-summary-table-data"></tbody>
+                </table>
+              </div>
+              <button onclick="paymentPage()" class="app-btn mt-3 checkout-btn">
+                CHECKOUT
+              </button>
+            </div>
+            <div class="col-xxl-6 col-lg-5 col-md-4 align-items-md-stretch">
+              <img
+                class="cart-img img-fluid object-fit-cover w-100 h-100"
+                src="../images/app_images/varieties-spices-grains-market-table.jpg"
+                alt="Colorful assortment of spices arranged neatly in bowls, resembling a vibrant market display"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Four: Checkout Page (populated by cart.js script file) -->
+    <section
+      id="payment-page-container"
+      class="info-message-container-hidden app-page"
+    ></section>
+
+    <!-- Section Five: Order Confirmation Message (populated by cart.js script file) -->
+    <section
+      id="order-confirmation-message-container"
+      class="info-message-container-hidden app-page"
+    ></section>
+
+    <!-- Javascript file links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/prodInventory.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/purchaseDetailsScroll.js"></script>
+    <script src="../js/navToggleMenu.js"></script>
+    <script src="../js/navWindowScroll.js"></script>
+  </body>
+</html>
+
+<!-- REFERENCES -->
+<!-- All images used in this cart display are royalty free, sourced from the following websites: Unsplash, Pexels, Pixabay and FreePik -->

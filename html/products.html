@@ -1,0 +1,139 @@
+<!-- THE SPICE PANTRY E-COMMERCE WEBSITE: SHOP HTML FILE -->
+<!-- Kindly refer to the end of this document for all references -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>The Spice Pantry | Shop</title>
+
+    <!-- Disclaimer: This webpage utilizes both CSS and Bootstrap stylings -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN link for Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="products-page app-page">
+      <!-- HEADER / NAVBAR SECTION -->
+      <header id="site-header" class="site-header z-2">
+        <!-- Responsive Hamburger Menu Icon  -->
+        <div
+          id="hamburger-menu"
+          class="hamburger-menu ms-3"
+          onclick="navToggleMenu()"
+        >
+          <i class="bi bi-list text-white fs-2 fw-bolder"></i>
+
+          <!-- Responsive Hamburger Menu Asterisk: indicates that there are items in the shopping cart. -->
+          <i id="hamburger-menu-bi-asterisk"></i>
+        </div>
+
+        <!-- Navigation bar links -->
+        <div id="navbar-container" class="navbar-container">
+          <nav id="navbar">
+            <ul>
+              <li class="list-unstyled">
+                <a href="../html/landPage.html">Home</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/products.html">Shop</a>
+              </li>
+              <!-- New HTML link structure for the cart nav link display - active for screen widths below 768px -->
+              <li class="list-unstyled" id="responsive-cart-nav-link">
+                <a href="../html/cart.html">Cart</a>
+                <span id="responsive-cart-total"></span>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/about.html">Our Story</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/reviews.html">Reviews</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/contact.html">Contact Us</a>
+              </li>
+              <!-- Navbar Cart Icon -->
+              <a
+                class="cart-nav-link me-4 position-relative"
+                href="./cart.html"
+              >
+                <div class="cart-icon-container fs-1">
+                  <i class="cart-icon bi bi-bag-fill"></i>
+                </div>
+                <div id="cart-qty" class="cart-qty"></div>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Shop Page content container -->
+      <div id="page-content-container" class="container-lg text-white">
+        <!-- Shop Page Title -->
+        <div class="row app-content-container mx-0 mb-4">
+          <div class="col-12 p-3">
+            <h2>Welcome to The Spice Pantry Shop</h2>
+          </div>
+        </div>
+
+        <!-- Shop Page Intro -->
+        <div class="page-intro app-content-container row mx-0 mb-4">
+          <div class="col-12 p-4">
+            <p class="fs-5">
+              Welcome to The Spice Pantry Shop, your one-stop destination for
+              premium spices. At The Spice Pantry, we're passionate about
+              bringing you the finest selection of spices from around the world,
+              curated with love and care by our team. Whether you're a seasoned
+              chef or an amateur cook, we invite you to embark on a flavorful
+              journey with us.
+            </p>
+            <p class="fs-5">
+              So, take your time, explore our shop with a diverse range of
+              spices, and savor the experience. And remember, if you have any
+              questions or need assistance, don't hesitate to reach out. Drop us
+              an email at
+              <a href="mailto:customercare@thespicepantry.co.za"
+                >customercare@thespicepantry.co.za</a
+              >, and let's spice up your culinary journey together.
+            </p>
+          </div>
+        </div>
+
+        <!-- Container to display all products offered by THE SPICE PANTRY (populated by index.js script file) -->
+        <div id="shop" class="shop mb-5"></div>
+      </div>
+    </section>
+
+    <!-- Javascript file links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/prodInventory.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/activeNavLink.js"></script>
+    <script src="../js/navWindowScroll.js"></script>
+    <script src="../js/navToggleMenu.js"></script>
+  </body>
+</html>
+
+<!-- REFERENCES -->
+<!-- 
+* All icons used in this project are sourced from Bootstrap-Icons (increment[+] and decrement[-] buttons): https://icons.getbootstrap.com/
+* All product images used in this product-shop display are royalty free, sourced from the following websites: Unsplash, Pexels, Pixabay and FreePik. */
+-->

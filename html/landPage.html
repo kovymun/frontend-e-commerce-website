@@ -1,0 +1,132 @@
+<!-- THE SPICE PANTRY E-COMMERCE WEBSITE: LANDING PAGE HTML FILE -->
+<!-- Kindly refer to the end of this document for all references -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Title -->
+    <title>The Spice Pantry</title>
+
+    <!-- Disclaimer: This webpage utilizes both CSS and Bootstrap stylings -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN link for Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <section class="landing-page">
+      <!-- HEADER / NAVBAR SECTION -->
+      <header class="z-2">
+        <!-- Responsive Hamburger Menu Icon  -->
+        <div
+          id="hamburger-menu"
+          class="hamburger-menu ms-3"
+          onclick="navToggleMenu()"
+        >
+          <i class="bi bi-list text-white fs-2 fw-bolder hamburger-icon"></i>
+
+          <!-- Responsive Hamburger Menu Asterisk: indicates that there are items in the shopping cart. -->
+          <i id="hamburger-menu-bi-asterisk"></i>
+        </div>
+
+        <!-- Navigation bar links -->
+        <div id="navbar-container" class="navbar-container">
+          <nav id="navbar">
+            <ul>
+              <li class="list-unstyled">
+                <a href="../html/landPage.html">Home</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/products.html">Shop</a>
+              </li>
+              <!-- New HTML link structure for the cart nav link display - active for screen widths below 768px -->
+              <li class="list-unstyled" id="responsive-cart-nav-link">
+                <a href="../html/cart.html">Cart</a>
+                <span id="responsive-cart-total"></span>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/about.html">Our Story</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/reviews.html">Reviews</a>
+              </li>
+              <li class="list-unstyled">
+                <a href="../html/contact.html">Contact Us</a>
+              </li>
+              <!-- Navbar Cart Icon -->
+              <a
+                class="cart-nav-link me-4 position-relative"
+                href="./cart.html"
+              >
+                <div class="cart-icon-container fs-1">
+                  <i class="cart-icon bi bi-bag-fill"></i>
+                </div>
+                <div id="cart-qty" class="cart-qty"></div>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN BODY SECTION -->
+      <!-- Landing Page Background-video: Harvesters in the field gathering a variety of spices -->
+      <div class="bg-video-container position-absolute top-0 w-100 h-100">
+        <video class="bg-video" autoplay loop muted playsinline>
+          <source
+            src="../videos/bg_videos/bg-video-harvesting.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+
+      <!-- Landing Page Title -->
+      <h1 class="landing-title">The Spice Pantry</h1>
+
+      <!-- FOOTER SECTION -->
+      <footer
+        class="footer text-white d-flex justify-content-center align-items-center position-fixed bottom-0"
+      >
+        <!-- 
+        Social Media Icon Links. NOTE: As this is an application developed for a fictitious company, the social media links 
+        are purely for aesthetic presentation and do not offer any functionality.
+        -->
+        <div class="social-icon-container">
+          <i class="bi bi-facebook fs-5"></i>
+          <i class="bi bi-twitter-x fs-5"></i>
+          <i class="bi bi-instagram fs-5"></i>
+          <i class="bi bi-threads fs-5"></i>
+          <i class="bi bi-tiktok fs-5"></i>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Javascript file links -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/activeNavLink.js"></script>
+    <script src="../js/navToggleMenu.js"></script>
+    <script src="../js/cartIcon.js"></script>
+  </body>
+</html>
+
+<!-- REFERENCES -->
+<!-- 
+* All icons used in this project are sourced from Bootstrap-Icons: https://icons.getbootstrap.com/
+* Video media used in this display is royalty free, sourced from the following website: Pexels https://www.pexels.com/
+-->
