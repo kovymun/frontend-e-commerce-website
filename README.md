@@ -4,7 +4,6 @@
 
 - [Description and Purpose](#description-and-purpose)
 - [Disclaimer](#disclaimer)
-- [Key Features](#key-features)
 - [Tools and Programming languages used](#tools-and-programming-languages-used)
 - [Installation Guide](#installation-guide)
 - [Usage guide](#usage-guide)
@@ -55,7 +54,7 @@ Downloading the repository:
 - From the _drop-down options_, select **Download Zip.**
 - This will download the repository to your local machine.
 
-<img width="612" alt="Screenshot 2024-04-08 204104" src="https://github.com/kovymun/frontend-web-development-project-e-commerce-website-html-css-javascript/assets/78513588/6e26bc99-c2ff-42dd-bcbc-9f7b8b7275fd">
+<img width="609" alt="e-commerce-repo-installation" src="https://github.com/kovymun/frontend-e-commerce-website/assets/78513588/c7b607df-1781-4b22-98ac-ef37b7dd3518">
 
 After downloading the repository, you'll find the following folders / directories in the Download.zip folder:
 
@@ -85,6 +84,8 @@ The application consists of 6 pages. It incorporates a responsive design, seamle
 - Customer Reviews: Product reviews from valued clients.
 - Contact Us: Contact Details and Store Locations.
 - Shopping Cart: Keeps track of cart selections and order summaries.
+
+<img width="956" alt="spice-pantry-landing" src="https://github.com/kovymun/frontend-e-commerce-website/assets/78513588/bef38ca7-7e03-4bbe-b28b-fb4a5e83525a">
 
 ### Starting your Shopping Journey:
 
