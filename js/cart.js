@@ -513,7 +513,7 @@ function confirmOrder() {
         <a href="../html/refundPolicy.html">Refund & Exchange Policy</a>.
       </p>
       <p>We look forward to welcoming you back to The Spice Pantry soon!</p>
-      <a class="app-btn info-message-close-btn" href="../html/index.html"
+      <a class="app-btn info-message-close-btn" href="../html/landPage.html"
         >CLOSE</a
       >
       </div>
